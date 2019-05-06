@@ -343,18 +343,7 @@ var config = {
 					hide: "true",
 				}
 		},
-		{
-			module: 'MMM-iFrame41', //24
-			position: "top_center",	// This can be any of the regions.
-			config: {
-				// See 'Configuration options' for more information.
-					url: ["http://172.16.98.14:9000/remote.html"],  // as many URLs you want or you can just ["ENTER IN URL"] if single URL.
-					updateInterval: 0.5 * 60 * 1000, // rotate URLs every 30 seconds
-					width: "2000", // width of iframe
-					height: "1800", // height of iframe
-					frameWidth: "950", // width of embedded iframe, height is beeing calculated by aspect ratio of iframe
-				}
-		},
+
 		//1
 		{
 			module: "MMM-EmbedYoutube1",  //25
@@ -439,6 +428,18 @@ var config = {
 				longitude: 126.9287487782795,
 				language: 'ko',
 			}
+		},
+		{
+			module: 'MMM-iFrame41', //24
+			position: "top_center",	// This can be any of the regions.
+			config: {
+				// See 'Configuration options' for more information.
+					url: ["http://172.16.98.14:9000/remote.html"],  // as many URLs you want or you can just ["ENTER IN URL"] if single URL.
+					updateInterval: 0.5 * 60 * 1000, // rotate URLs every 30 seconds
+					width: "2000", // width of iframe
+					height: "1800", // height of iframe
+					frameWidth: "950", // width of embedded iframe, height is beeing calculated by aspect ratio of iframe
+				}
 		},
 		{
 				module: 'MMM-GoogleMapsTraffic',
