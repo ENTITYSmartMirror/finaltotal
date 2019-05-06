@@ -62,6 +62,5 @@ resume: function() {
                 wrapper.insertAdjacentHTML("afterbegin", html);
 
 		return wrapper;
-	}
-
+        },      
 });

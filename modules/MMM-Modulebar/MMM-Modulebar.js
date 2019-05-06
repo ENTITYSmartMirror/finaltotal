@@ -37,13 +37,13 @@ Module.register("MMM-Modulebar",{
 			"1": {
 				module: "MMM-Modulebar1",
 				text:   "남자헤어",
-				symbol: "clock-o"
+				img:"https://image.flaticon.com/icons/svg/1751/1751434.svg"
 			},
 
 			"2": {
 				module: "MMM-Modulebar2",
 				text:   "여자헤어",
-				symbol: "clock-o"
+				img : "https://image.flaticon.com/icons/svg/1751/1751437.svg"
 			}
 		}
 	},
@@ -90,7 +90,6 @@ Module.register("MMM-Modulebar",{
 		item.addEventListener("click", function () {
 			// Lists through all modules for testing.
 			for (var i = 0; i < modules.length; i++) {
-				
 				// Check if the curent module is the one.
 				if (modules[i].name === data.module) {
 					// Splits out the module number of the module with the same name.
@@ -128,7 +127,7 @@ Module.register("MMM-Modulebar",{
 								modules[1].hide(self.config.animationSpeed, {force: self.config.allowForce});	
 								
 								
-								for (var k = 3; k < 17; k++){
+								for (var k = 0; k < 17; k++){
 									console.log("Hiding opend "+ modules[k].name+" ID: "+idnr[1]);
 									modules[k].hide(self.config.animationSpeed, {force: self.config.allowForce});	
 								}
@@ -137,12 +136,13 @@ Module.register("MMM-Modulebar",{
 								setTimeout(function(){
 									modules[2].show(self.config.animationSpeed, {force: self.config.allowForce});
 								},500);
+								modulebarr.sendNotification("Modulebar0 is Clicked");
 							}
 							else {
 								console.log("Hiding opend "+ modules[2].name+" ID: "+idnr[1]);			
 								modules[2].hide(self.config.animationSpeed, {force: self.config.allowForce});
 
-								for (var k = 3; k < 17; k++){
+								for (var k = 0; k < 17; k++){
 									console.log("Hiding opend "+ modules[k].name+" ID: "+idnr[1]);
 									modules[k].hide(self.config.animationSpeed, {force: self.config.allowForce});	
 								}
@@ -151,7 +151,7 @@ Module.register("MMM-Modulebar",{
 								setTimeout(function(){
 								modules[1].show(self.config.animationSpeed, {force: self.config.allowForce});
 								},500);
-								
+								modulebarr.sendNotification("Modulebar0 is Clicked");
 							}
 						}
 					}

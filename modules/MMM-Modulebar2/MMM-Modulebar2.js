@@ -10,7 +10,7 @@
  */
 
 //var request = require('request');
-
+var modulebar2;
 Module.register("MMM-Modulebar2",{
 	
 	requiresVersion: "2.1.0",
@@ -23,60 +23,76 @@ Module.register("MMM-Modulebar2",{
         // The minimum width for all the buttons.
         minWidth: "0px",
         // The minimum height for all the buttons.
-        minHeight: "0px",
+        minHeight: "70px",
         // The location of the symbol relative to the text. Options: left, right, top or bottom
-        picturePlacement: "top",
+        picturePlacement: "left",
         // The direction of the bar. Options: row, column, row-reverse or column-reverse
-        direction: "column-reverse",
+        direction: "column",
 		// The speed of the hide and show animation.
 		animationSpeed: 500,
         // The default button 1. Add your buttons in the config.
 		buttons: {
 			"1": {
 				module: "MMM-iFrame10",
-				text:   "남자헤어",
-				symbol: "clock-o"
+				text:   "레이어드",
+				img: "https://image.flaticon.com/icons/svg/1751/1751349.svg",
+				width: "50",
+				height: "50",
 			},
 			
 			"2": {
 				module: "MMM-iFrame11",
-				text:   "남자헤어",
-				symbol: "clock-o"
+				text:   "보브",
+				img: "https://image.flaticon.com/icons/svg/1751/1751349.svg",
+				width: "50",
+				height: "50",
 			},
 
 			"3": {
 				module: "MMM-iFrame12",
-				text:   "여자헤어",
-				symbol: "clock-o"
+				text:   "숏",
+				img: "https://image.flaticon.com/icons/svg/1751/1751349.svg",
+				width: "50",
+				height: "50",
 			},
 			"4": {
 				module: "MMM-iFrame13",
-				text:   "여자헤어",
-				symbol: "clock-o"
+				text:   "히메",
+				img: "https://image.flaticon.com/icons/svg/1751/1751349.svg",
+				width: "50",
+				height: "50",
 			},
 			"5": {
 				module: "MMM-iFrame14",
-				text:   "여자헤어",
-				symbol: "clock-o"
+				text:   "글램펌",
+				img: "https://image.flaticon.com/icons/svg/1751/1751349.svg",
+				width: "50",
+				height: "50",
 			},
 			"6": {
 				module: "MMM-iFrame15",
-				text:   "여자헤어",
-				symbol: "clock-o"
+				text:   "바디펌",
+				img: "https://image.flaticon.com/icons/svg/1751/1751349.svg",
+				width: "50",
+				height: "50",
 			},
 			"7": {
 				module: "MMM-iFrame16",
-				text:   "여자헤어",
-				symbol: "clock-o"
+				text:   "히피펌",
+				img: "https://image.flaticon.com/icons/svg/1751/1751349.svg",
+				width: "50",
+				height: "50",
 			},
 			
 
 		}
     },
-
     // Define required styles.
 	getStyles: function(){
 		return ["font-awesome.css", "MMM-Modulebar.css"];
+	},
+	start () {
+		modulebar2 = this;
 	},
 
     // Override dom generator.
@@ -139,7 +155,7 @@ Module.register("MMM-Modulebar2",{
 								console.log("Visiting show URL: "+data.showUrl);
 							}
 							if (modules[i].name == 'MMM-iFrame10') {
-								for(var num=3; num<17; num++ ){
+								for(var num=0; num<17; num++ ){
 								console.log("Hiding opend "+ modules[num].name+" ID: "+idnr[1]);
 								modules[num].hide(self.config.animationSpeed, {force: self.config.allowForce});	
 								}
@@ -149,7 +165,7 @@ Module.register("MMM-Modulebar2",{
 								},500);
 							}
 							else if (modules[i].name == 'MMM-iFrame11') {
-								for(var num=3; num<17; num++ ){
+								for(var num=0; num<17; num++ ){
 									console.log("Hiding opend "+ modules[num].name+" ID: "+idnr[1]);
 									modules[num].hide(self.config.animationSpeed, {force: self.config.allowForce});	
 									}
@@ -159,7 +175,7 @@ Module.register("MMM-Modulebar2",{
 									},500);
 							}
 							else if (modules[i].name == 'MMM-iFrame12') {
-								for(var num=3; num<17; num++ ){
+								for(var num=0; num<17; num++ ){
 									console.log("Hiding opend "+ modules[num].name+" ID: "+idnr[1]);
 									modules[num].hide(self.config.animationSpeed, {force: self.config.allowForce});	
 									}
@@ -169,7 +185,7 @@ Module.register("MMM-Modulebar2",{
 									},500);
 							}
 							else if (modules[i].name == 'MMM-iFrame13') {
-								for(var num=3; num<17; num++ ){
+								for(var num=0; num<17; num++ ){
 									console.log("Hiding opend "+ modules[num].name+" ID: "+idnr[1]);
 									modules[num].hide(self.config.animationSpeed, {force: self.config.allowForce});	
 									}
@@ -179,7 +195,7 @@ Module.register("MMM-Modulebar2",{
 									},500);
 							}
 							else if (modules[i].name == 'MMM-iFrame14') {
-								for(var num=3; num<17; num++ ){
+								for(var num=0; num<17; num++ ){
 									console.log("Hiding opend "+ modules[num].name+" ID: "+idnr[1]);
 									modules[num].hide(self.config.animationSpeed, {force: self.config.allowForce});	
 									}
@@ -189,7 +205,7 @@ Module.register("MMM-Modulebar2",{
 									},500);
 							}
 							else if (modules[i].name == 'MMM-iFrame15') {
-								for(var num=3; num<17; num++ ){
+								for(var num=0; num<17; num++ ){
 									console.log("Hiding opend "+ modules[num].name+" ID: "+idnr[1]);
 									modules[num].hide(self.config.animationSpeed, {force: self.config.allowForce});	
 									}
@@ -199,7 +215,7 @@ Module.register("MMM-Modulebar2",{
 									},500);
 							}
 							else {
-								for(var num=3; num<17; num++ ){
+								for(var num=0; num<17; num++ ){
 									console.log("Hiding opend "+ modules[num].name+" ID: "+idnr[1]);
 									modules[num].hide(self.config.animationSpeed, {force: self.config.allowForce});	
 									}
@@ -208,6 +224,7 @@ Module.register("MMM-Modulebar2",{
 									modules[16].show(self.config.animationSpeed, {force: self.config.allowForce});
 								},500);
 							}
+							modulebar2.sendNotification("Modulebar2 is Clicked");
 						}
 					}
 				}

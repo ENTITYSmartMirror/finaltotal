@@ -56,7 +56,6 @@ Module.register('MMM-Carousel', {
                 this.restartTimer();
             }
         }
-        this.sendNotification('Modules All Change');
     },
 
     notificationReceived: function(notification, payload, sender) {
@@ -330,6 +329,34 @@ Module.register('MMM-Carousel', {
         this.manualTransition(slideNum);
         this.restartTimer();
         this.sendNotification('Modules All Change');
+        this.sendNotification('CHANGE_POSITIONS', 
+        modules = {
+              'MMM-iFrame17':{
+                visible: 'false',
+                position: 'bottom_left',
+              },
+              'MMM-iFrame18':{
+                visible: 'false',
+                position: 'bottom_left',
+              },
+              'MMM-iFrame19':{
+                visible: 'false',
+                position: 'bottom_left',
+              },
+              'MMM-iFrame20':{
+                visible: 'false',
+                position: 'bottom_left',
+              },
+              'MMM-iFrame21':{
+                visible: 'false',
+                position: 'bottom_left',
+              },
+              'MMM-iFrame22':{
+                visible: 'false',
+                position: 'bottom_left',
+              },
+            });
+       
     },
 
     getStyles: function() {
@@ -359,7 +386,24 @@ Module.register('MMM-Carousel', {
             paginationWrapper.className = "slider-pagination";
 
             var paginationWrapper1 = document.createElement("div");
-            paginationWrapper1.className = "slider-pagination2";
+            paginationWrapper1.className = "slider-pagination1";
+
+            var paginationWrapper2 = document.createElement("div");
+            paginationWrapper2.className = "slider-pagination2";
+            
+            var paginationWrapper3 = document.createElement("div");
+            paginationWrapper3.className = "slider-pagination2";
+            
+            var paginationWrapper4 = document.createElement("div");
+            paginationWrapper4.className = "slider-pagination2";
+            
+            var paginationWrapper5 = document.createElement("div");
+            paginationWrapper5.className = "slider-pagination2";
+
+
+            var paginationWrapper6 = document.createElement("div");
+            paginationWrapper6.className = "slider-pagination2";
+
 
             for (var i = 0; i < Object.keys(this.config.slides).length; i++) {
                 var input = document.createElement("input");
@@ -368,7 +412,7 @@ Module.register('MMM-Carousel', {
                 input.id = "slider_" + i;
                 input.className = "slide-radio";
                 input.onchange = makeOnChangeHandler(i);
-                paginationWrapper.appendChild(input);
+                paginationWrapper.appendChild(input); 
             }
             
 
@@ -378,10 +422,10 @@ Module.register('MMM-Carousel', {
                     label.setAttribute("for", "slider_" + i);
                     label.id = "sliderLabel_" + i;
                     paginationWrapper.appendChild(label);
-       
                 }
             }
             div.appendChild(paginationWrapper);
+            
 
             if (this.config.showPageControls) {
                 var nextWrapper = document.createElement("div");
