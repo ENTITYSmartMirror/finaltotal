@@ -390,6 +390,62 @@ var config = {
 			module: "MMM-Dynamic-Modules",
 		},
 		{
+			module: 'MMM-iFrame23',
+			position: 'bottom_left',	// This can be any of the regions.
+			visible : 'false',
+			config: {
+				// See 'Configuration options' for more information.
+					url: ["http://s3.us-east-2.amazonaws.com/beautymirror.com/demo/index.html"],  // as many URLs you want or you can just ["ENTER IN URL"] if single URL.
+					updateInterval: 0.5 * 60 * 1000, // rotate URLs every 30 seconds
+					width: "3500", // width of iframe
+					height: "2000", // height of iframe
+					frameWidth: "950", // width of embedded iframe, height is beeing calculated by aspect ratio of iframe		
+					hidden : "true",
+			}
+		},
+		{
+			module: 'MMM-iFrame24',
+			position: 'bottom_left',	// This can be any of the regions.
+			visible : 'false',
+			config: {
+				// See 'Configuration options' for more information.
+					url: ["http://s3.us-east-2.amazonaws.com/beautymirror.com/demo/index.html"],  // as many URLs you want or you can just ["ENTER IN URL"] if single URL.
+					updateInterval: 0.5 * 60 * 1000, // rotate URLs every 30 seconds
+					width: "3500", // width of iframe
+					height: "2000", // height of iframe
+					frameWidth: "950", // width of embedded iframe, height is beeing calculated by aspect ratio of iframe		
+					hidden : "true",
+			}
+		},
+		{
+			module: 'MMM-iFrame25',
+			position: 'bottom_left',	// This can be any of the regions.
+			visible : 'false',
+			config: {
+				// See 'Configuration options' for more information.
+					url: ["http://s3.us-east-2.amazonaws.com/beautymirror.com/demo/index.html"],  // as many URLs you want or you can just ["ENTER IN URL"] if single URL.
+					updateInterval: 0.5 * 60 * 1000, // rotate URLs every 30 seconds
+					width: "3500", // width of iframe
+					height: "2000", // height of iframe
+					frameWidth: "950", // width of embedded iframe, height is beeing calculated by aspect ratio of iframe		
+					hidden : "true",
+			}
+		},
+		{
+			module: 'MMM-iFrame26',
+			position: 'bottom_left',	// This can be any of the regions.
+			visible : 'false',
+			config: {
+				// See 'Configuration options' for more information.
+					url: ["http://s3.us-east-2.amazonaws.com/beautymirror.com/demo/index.html"],  // as many URLs you want or you can just ["ENTER IN URL"] if single URL.
+					updateInterval: 0.5 * 60 * 1000, // rotate URLs every 30 seconds
+					width: "3500", // width of iframe
+					height: "2000", // height of iframe
+					frameWidth: "950", // width of embedded iframe, height is beeing calculated by aspect ratio of iframe		
+					hidden : "true",
+			}
+		},
+		{
 			module: 'MMM-Remote-Control',
 			position: "bottom_left",
 			// uncomment the following line to show the URL of the remote control on the mirror
@@ -434,7 +490,7 @@ var config = {
 			position: "top_center",	// This can be any of the regions.
 			config: {
 				// See 'Configuration options' for more information.
-					url: ["http://172.16.98.14:9000/remote.html"],  // as many URLs you want or you can just ["ENTER IN URL"] if single URL.
+					url: ["http://127.0.0.1:9000/remote.html"],  // as many URLs you want or you can just ["ENTER IN URL"] if single URL.
 					updateInterval: 0.5 * 60 * 1000, // rotate URLs every 30 seconds
 					width: "2000", // width of iframe
 					height: "1800", // height of iframe

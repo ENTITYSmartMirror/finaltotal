@@ -11,9 +11,9 @@ module.exports = NodeHelper.create({
     switch(notification) {
       case "TEST":
         console.log("notification : " + notification)
-	    PythonShell.run('c://Users/user/Desktop/MagicMirror-master (2)/MagicMirror-master/modules/MMM-Testpython/FCF.py', null, function (err, result) {
+	    PythonShell.run('c://Users/user/Desktop/MagicMirror-master/modules/MMM-Testpython/FCF.py', null, function (err, result) {
             if (err) throw err;
-            console.log(result);          
+            console.log("sex" + result);          
             socketTestpython.sendSocketNotification("I_DID",result);
           });
 	       

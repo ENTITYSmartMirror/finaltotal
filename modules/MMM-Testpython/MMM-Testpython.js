@@ -68,35 +68,70 @@ Module.register("MMM-Testpython", {
   socketNotificationReceived: function(notification, payload) {
     switch(notification) {
       case "I_DID":
-        console.log("Socket recevied 1: "+payload)
-        var elemk = document.getElementById("showage")
+        console.log("Socket recevied 1: " + payload);
+        var payload3;
+        payload3=payload.toString().split("_");
+        console.log("Socket recevied 1: " + payload3);
+        var elemk = document.getElementById("showage");
+        var sex = payload3[0];
+        console.log("Socket recevied 1: " + sex);
+        var age = payload3[1];
+        console.log("Socket recevied 1: " + age);
         var change;
-        if(payload <= 19){
-          change = 1;
-          console.log(payload);
-          console.log(change);
+        if (sex == "Male"){
+          if(age <= 19){
+            change = 1;
+            console.log(age);
+            console.log(change);
+          }
+          else if(19 < age && age < 30){
+            change = 2;
+            console.log(age);
+            console.log(change);
+          }
+          else if(29 < age && age < 40){
+            change = 3; 
+            console.log(age);
+            console.log(change);
+          }
+          else if(39 < age && age < 50){
+            change = 4;  
+            console.log(age);
+            console.log(change);
+          }
+          else if(49 < age){
+            change = 5;
+            console.log(age);
+            console.log(change);
+          }
         }
-        else if(19 < payload && payload < 30){
-          change = 2;
-          console.log(payload);
-          console.log(change);
+        else if (sex == "Female"){
+          if(age <= 19){
+            change = 6;
+            console.log(age);
+            console.log(change);
+          }
+          else if(19 < age && age < 30){
+            change = 7;
+            console.log(age);
+            console.log(change);
+          }
+          else if(29 < age && age < 40){
+            change = 8; 
+            console.log(age);
+            console.log(change);
+          }
+          else if(39 < age && age < 50){
+            change = 9;  
+            console.log(age);
+            console.log(change);
+          }
+          else if(49 < age){
+            change = 10;
+            console.log(age);
+            console.log(change);
+          }
         }
-        else if(29 < payload && payload < 40){
-          change = 3; 
-          console.log(payload);
-          console.log(change);
-        }
-        else if(39 < payload && payload < 50){
-          change = 4;  
-          console.log(payload);
-          console.log(change);
-        }
-        else if(49 < payload){
-          change = 5;
-          console.log(payload);
-          console.log(change);
-        }
-
           switch(change){
             case 1 : 
               this.sendNotification('CHANGE_POSITIONS', 
@@ -143,17 +178,53 @@ Module.register("MMM-Testpython", {
               }
             })
             break
-            default : 
+            case 6 : 
               this.sendNotification('CHANGE_POSITIONS', 
               modules = {
                 'MMM-iFrame22':{
                   visible: 'true',
                   position: 'top_left',
-                }
-              })
+              } 
+            })
+            break
+            case 7 : 
+              this.sendNotification('CHANGE_POSITIONS', 
+              modules = {
+                'MMM-iFrame23':{
+                  visible: 'true',
+                  position: 'top_left',
+              } 
+            })
+            break
+            case 8 : 
+              this.sendNotification('CHANGE_POSITIONS', 
+              modules = {
+                'MMM-iFrame24':{
+                  visible: 'true',
+                  position: 'top_left',
+              } 
+            })
+            break
+            case 9 : 
+              this.sendNotification('CHANGE_POSITIONS', 
+              modules = {
+                'MMM-iFrame25':{
+                  visible: 'true',
+                  position: 'top_left',
+              } 
+            })
+            break
+            case 10 : 
+              this.sendNotification('CHANGE_POSITIONS', 
+              modules = {
+                'MMM-iFrame26':{
+                  visible: 'true',
+                  position: 'top_left',
+              } 
+            })
             break
           } 
-        elemk.innerHTML = "당신의 예상 나이는 " + payload + "세 입니다.";   
+        elemk.innerHTML = "당신의 예상 나이는 " + age + "세 입니다.";   
       break
     }
   }
